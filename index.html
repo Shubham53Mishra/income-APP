@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Document</title>
+</head>
+<body>
+  <nav class="sidebar2 close2">
+    <header>
+        <div class="image-text">
+            <span class="image">
+                <img src="./logo.png" alt="LOGO">
+            </span>
+
+  
+        </div>
+
+        
+    </header>
+
+    <div class="menu-bar">
+        <div class="menu">
+            <li class="search-box">
+                <a href="#">
+                    <i class="fa fa-search  icon"></i>
+                    <input type="search" placeholder="Search...">
+                </a>
+            </li>
+            <ul class="menu-links">
+                <li class="nav-link">
+                    <a href="#">
+                        <i class="fa fa-home icon"></i>
+                        <span class="text nav-text">HOME</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="menu-links">
+                <li class="nav-link">
+                    <a href="#">
+                        <i class="fa fa-book icon"></i>
+                        <span class="text nav-text">Revenue</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="menu-links">
+                
+            </ul>
+            <ul class="menu-links">
+                <li class="nav-link">
+                    <a href="#">
+                        <i class="fa fa-bar-chart icon"></i>
+                        <span class="text nav-text">Analytics</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="menu-links">
+               
+            </ul>
+            <ul class="menu-links">
+                <li class="nav-link">
+                    <a href="#">
+                        <i class="fa fa-user icon"></i>
+                        <span class="text nav-text">User</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="bottom-content2">
+            <li class="mood">
+                <div class="bell">
+                    
+                    <i class="fa fa-bell icon"></i> 
+                </div>
+                <div class="mood-text text">Notification</div>
+            </li>
+            <li class="">
+                <a href="#">
+                    <i class="fa fa-arrow-left icon"></i>
+                    <span class="text nav-text">Logout</span>
+                </a>
+            </li>
+        </div>
+    </div>
+</nav>
+    <div class="wrapper">
+        <div class="box1">
+            <div class="profile">
+                <nav class="sidebar-1">
+                    <header>
+                        <div class="image-text">
+                            <span class="image">
+                                <img src="./profille.jpg" alt="LOGO">
+                            </span>
+                            <div class="text header-text">
+                                <span class="name">Hi Shubham,</span>
+                                <span class="profession">welcome back.</span>
+                            </div>
+                        </div>
+                          <div class="card">
+                           <p>Today</p>
+                           <h2>$19,892</h2>
+                           <p>Account Balance</p>
+                           <br><br>
+                           <h4>$19,892</h4>
+                           <p>year-to-Date contributions </p>
+                           <br>
+                           <h4>$1,892</h4>
+                           <p>Total lnterest</p>
+                          </div>
+                          <br><br>
+                          <button class="blue-button">I went to </button>
+                        <br> <br>
+                         <h3> Recent Transactions</h3>
+                         <br>
+                         <p>2020-08-07</p>
+                        <p> Withdrawal transaction to bank-xxx11</p>
+                        <br><br>
+                        <p>2020-07-21</p>
+                        <p> Withdrawal transaction to bank-xxx11</p>
+                        <br><br><br>
+                        <!-- <p>2020-07-16</p>
+                        <p> Withdrawal transaction to bank-xxx11</p>
+                        </div> -->
+                       
+                    </header>
+                   
+                </nav>
+            </div>
+        </div>
+        <div class="box2">
+            <div class="chart-bar">
+                <DIV>
+                    <div class="Income">
+                        <p>Reatirement Income</p>
+                       <h1 class="black">Starting Year 2056</h1>
+           
+                    </div>
+                  
+                   <div class="flex" >
+                       <div>
+                           <p  class="heading">300,000</p>
+                           <p>My Goal</p>
+                           <hr class="blue">
+                       </div>
+                       <div>
+                           <p  class="heading">359%</p>
+                           <p>Goal Achieve</p>
+                           <hr class="blue">
+                       </div>
+                       <div>
+                           <p  class="heading">300</p>
+                           <p>Est Monthly Income</p>
+                           <hr class="blue">
+                       </div>
+                    </div>
+                    <p class="overtime">Contribution overtime</p>
+                   
+                   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                   <style>
+                     /* Center the canvas horizontally */
+                     #myChart {
+                       display: block;
+                       margin-top: 25px;
+                       /* margin: auto; */
+                       /* width: 6rem; */
+                       /* height: 450px; */
+                       /* background-color: blue; */
+                       margin-left: 10px;
+    
+                     }
+                   </style>
+                 </head>
+                 <body>
+                   <canvas id="myChart" width="400" height="120"></canvas>
+                 
+                   <script>
+                     // Combined data for all bars
+                     var data = {
+                       labels: ['Bar 1', 'Bar 2', 'Bar 3', 'Bar 4', 'Bar 5', 'Bar 6', 'Bar 7', 'Bar 8' ,'Bar 9', 'Bar 10', 'Bar 11', 'Bar 12', 'Bar 13'],
+                       datasets: [
+                         {
+                           label: 'Segment 1',
+                           data: [5, 8, 8, 10,12, 15, 15, 20,24, 26, 28, 30, 32],
+                           backgroundColor: '#1200FE', // Blue
+                         },
+                         {
+                           label: 'Segment 2',
+                           data: [5, 8, 8, 10,12, 15, 15, 20,24, 26, 30, 32, 35],
+                           backgroundColor: '#4E00FE', // Purple
+                         },
+                         {
+                           label: 'Segment 3',
+                           data: [5, 8, 8, 10,12, 15, 15, 20,24, 26, 30, 32, 35],
+                           backgroundColor: '#00A7FE', // Light-Blue
+                         },
+                       ],
+                     };
+                 
+                     // Chart configuration
+                     var options = {
+                       scales: {
+                         x: {
+                           stacked: true,
+                           barPercentage: 0.8, // Adjust this value to control the bar width
+                         },
+                         y: {
+                           stacked: true,
+                           max: 100,
+                         },
+                       },
+                     };
+                 
+                     // Get the context of the canvas element we want to select
+                     var ctx = document.getElementById('myChart').getContext('2d');
+                 
+                     // Create the bar chart
+                     var myChart = new Chart(ctx, {
+                       type: 'bar',
+                       data: data,
+                       options: options,
+                     });
+                   </script>
+                   
+               </DIV>
+               <div class="type">
+                <h1>How do I compare to my peers</h1>
+                <p>These numbers represent current goal achievenent</p>
+              </div>
+               
+              <div class="age">
+                <span>Age:</span>
+                <span><p>under30</p></span>
+              </div>
+            
+            <div class="circle-wrapper">
+              <div class="chart-container">
+                <canvas id="averageChart" width="80" height="80"></canvas>
+                <div id="averagePercentage" class="percentage"></div>
+              </div>
+              
+              <div class="chart-container">
+                <canvas id="goodChart" width="80" height="80"></canvas>
+                <div id="goodPercentage" class="percentage"></div>
+              </div>
+              
+              <div class="chart-container">
+                <canvas id="belowAverageChart" width="80" height="80"></canvas>
+                <div id="belowAveragePercentage" class="percentage"></div>
+              </div>
+              </div>
+            </div>
+    
+            <script>
+                // Get the canvas elements
+                var averageCtx = document.getElementById('averageChart').getContext('2d');
+                var goodCtx = document.getElementById('goodChart').getContext('2d');
+                var belowAverageCtx = document.getElementById('belowAverageChart').getContext('2d');
+              
+                // Data for the three pie charts
+                var averageData = {
+                  labels: ['Performance', 'Other'],
+                  datasets: [{
+                    data: [95, 5], // 60% Performance, 40% Other
+                    backgroundColor: ['#02FBC3', '#9BFCE6']
+                  }]
+                };
+              
+                var goodData = {
+                  labels: ['Performance', 'Other'],
+                  datasets: [{
+                    data: [70, 30], // 70% Performance, 30% Other
+                    backgroundColor: ['#02FBC3', '#9BFCE6']
+                  }]
+                };
+              
+                var belowAverageData = {
+                  labels: ['Performance', 'Other'],
+                  datasets: [{
+                    data: [80, 20], // 80% Performance, 20% Other
+                    backgroundColor: ['#02FBC3', '#9BFCE6']
+                  }]
+                };
+              
+                // Options for the pie charts
+                var options = {
+                  responsive: true,
+                  maintainAspectRatio: false,
+                  cutout: 30, // Adjust the cutout to control the size of the center hole
+                  plugins: {
+                    legend: {
+                      display: false
+                    },
+                    datalabels: {
+                      color: '#000',
+                      formatter: (value) => {
+                        return value + '%';
+                      },
+                      anchor: 'end', // Align the text to the end of the slice
+                      align: 'start'  // Align the text to the start of the slice
+                    }
+                  }
+                };
+              
+                // Create the three pie charts
+                var averageChart = new Chart(averageCtx, {
+                  type: 'doughnut',
+                  data: averageData,
+                  options: options
+                });
+              
+                var goodChart = new Chart(goodCtx, {
+                  type: 'doughnut',
+                  data: goodData,
+                  options: options
+                });
+              
+                var belowAverageChart = new Chart(belowAverageCtx, {
+                  type: 'doughnut',
+                  data: belowAverageData,
+                  options: options
+                });
+              
+                // Display percentages
+                document.getElementById('averagePercentage').innerHTML = '95%';
+                document.getElementById('goodPercentage').innerHTML = '70%';
+                document.getElementById('belowAveragePercentage').innerHTML = '80%';
+              </script>
+        </div>
+        <div class="box3">
+            <style>
+                .card2 {
+                    border: 1px solid #ccc;
+                    border-radius: 8px;
+                    padding: 20px;
+                    text-align: center;
+                    width: 300px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    margin-left: 40px;
+                    margin-top: 40px;
+                }
+        
+                h1 {
+                    font-size: 24px;
+                    margin-bottom: 15px;
+                }
+        
+                p {
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                }
+        
+                button {
+                    background-color: blueviolet;
+                    color: #fff;
+                    border: none;
+                    padding: 10px 20px;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
+                }
+        
+                button:hover {
+                    background:transparent;
+                    border: 2px solid blueviolet;
+                    color: blueviolet;
+                }
+        
+                .volume-container {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-top: 10px;
+                    color: blueviolet;
+                }
+        
+                input[type="range"] {
+                    width: 70%;
+                    margin-right: 10px;
+                    color: blueviolet;
+                }
+        
+                #volumeLabel {
+                    font-size: 14px;
+                    color: blueviolet;
+                }
+    
+                .card2  .volume-container .input #volumeConrtol{
+                  background-color: blueviolet;
+                }
+    
+    
+    
+            </style>
+        </head>
+        <body>
+            <div class="card2">
+                <h3>Retirement Strategy</h3>
+                <p>Employee Contribution</p>
+                <div class="volume-container">
+                    <input type="range" id="volumeControl" value="65" max="100"   oninput="updateVolumeLabel()">
+                    <div id="volumeLabel">65%</div>
+                </div>
+                  <p>Retirement Age</p>
+                <div class="volume-container">
+                    <input type="range" id="volumeControl" value="50" max="100" oninput="updateVolumeLabel()">
+                    <div id="volumeLabel">65%</div>
+                </div>
+                
+                <hr>
+                <p>Employee Contribution </p>
+                
+        
+                
+                
+                <p>Interest Rate</p>
+                <button onclick="adjustBass()">Update</button><br><br>
+                <p>View Help Docs ></p>
+            </div>
+
+            <div class="content-right">
+              <div id="verticle-line"></div>
+              <div class="right-text">
+                <p>Are you considering</p>
+                <h3>Housing Advance?</h3>
+                <p>Limited time reduced interest.</p>
+                <span class="right-learn">Learn More <i class="fa fa-arrow-right icon"></i> </span>
+              </div>
+          </div>
+        
+            <script>
+                function updateVolumeLabel() {
+                    var volumeValue = document.getElementById("volumeControl").value;
+                    document.getElementById("volumeLabel").textContent = volumeValue + "%";
+                }
+        
+                function adjustVolume() {
+                    var volumeValue = document.getElementById("volumeControl").value;
+                    // You can add logic here to control the music volume using the obtained value.
+                }
+            </script>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="bottom-nav">
+        <nav class="navbar">
+            <div class="max-width">
+                <ul class="menu">
+                    <li><a href="#" class="menu-btn"></a><i class="fa fa-home  icon"></i></li>
+                    <li><a href="#" class="menu-btn"></a><i class="fa fa-book  icon"></i></li>
+                    <li><a href="#" class="menu-btn"></a><i class="fa fa-bar-chart  icon"></i></li>
+                    <li><a href="#" class="menu-btn"></a><i class="fa fa-user  icon"></i></li>
+                    <li><a href="#" class="menu-btn"></a><i class="fa fa-search  icon"></i></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</body>
+</html>
